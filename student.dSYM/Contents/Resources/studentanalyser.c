@@ -189,7 +189,10 @@ void generate_report(struct Student *head) {
         printf("Average grade: %.2f\n", average);
         int best_subject, worst_subject;
         find_best_and_worst_subjects(current, &best_subject, &worst_subject);
-        printf("Best subject: Subject %d -GOOD \n", best_subject + 1);
+        if(best_subject>=60)
+        {
+            printf("Best subject: Subject %d -GOOD \n", best_subject + 1);
+        }
         printf("Worst subject: Subject %d - NEED TO WORK HARD \n", worst_subject + 1);
         has_attendance_shortage(current);
         printf("\n");
